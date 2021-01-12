@@ -16,11 +16,11 @@ class Bmi extends Component {
             }
         })
     }
-    handleWeight(e) {
-        const weight = (e.target.value)
+    handleHeight(e) {
+        const height = (e.target.value)
         this.setState(prevState => {
             return {
-                weight: weight,
+                height: height,
                 mass: prevState.mass,
             }
         })
@@ -40,7 +40,7 @@ class Bmi extends Component {
                     <input aria-label="mass-input" text="text" onChange={this.handleMass.bind(this)} value={this.state.mass}></input>
                     <input aria-label="height-input" text="text" onChange={this.handleHeight.bind(this)} value={this.state.height}></input>
                 </div>
-                <button aria-label="bmi-button" onClick={this.handleBmi.bind(this)}>Bmi</button>
+                <button aria-label="bmi-button" onClick={this.handleBmi.bind(this)}>bmi</button>
                 <b aria-label="bmi-output" >{this.state.result}</b>
             </div>
         )
